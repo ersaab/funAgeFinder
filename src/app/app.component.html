@@ -1,0 +1,37 @@
+<div class="card-title">
+  <h1 class="text-center"> {{wlcm}} </h1>
+</div>
+<div class="container" >
+
+<div class="card-head">
+  <label for="phno">Cell No. Last Digit</label>
+</div>
+<div>
+  <input class="form-control" type="text" name="phno" pattern=”[0–9]*” minlength="0" maxlength="1" [(ngModel)] = "phno" >
+</div>
+
+<div class="">
+<label for="byear">Birth Year </label>
+</div>
+<div>
+<input  class="form-control" type="text" name="byear" pattern=”[0–9]*” minlength="0" maxlength="4" [(ngModel)] = "byear" >
+</div>
+
+<div class="row btnr">
+<button class="btn btn-info" (click) = "getage(phno , byear)" >Get Age</button>
+</div>
+
+<div class="container" *ngIf="age">
+  <p>Your Age is {{age}} Years</p> 
+<h2>Little Fun!</h2>
+<p>1. Multipy last digit of your Cellphone with 2 <br>
+2. Add 5 to it. <br>
+3. Again Multiply Result with 50 <br>
+4. Add 1770 to Multiplied Value.<br>
+5. Deduct Your Birth Year from Resultant Value<br>
+<h4>Yippee!</h4> 
+<br>First Digit is Your Cellphone Last digit & Last Two are your Age.
+
+
+</div>
+</div>
